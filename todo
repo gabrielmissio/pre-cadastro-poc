@@ -1,0 +1,7 @@
+ - configure tests
+ - configure dynamodb-local container 
+ - configure migrations to dynamodb-local
+ - configure seeders to dynamodb
+ - determine application endpoints
+ - determine dynamodb tables
+ - update README.md
