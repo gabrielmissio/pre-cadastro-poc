@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/gabrielmissio/pre-cadastro-poc/issues"
   },
-  "homepage": "https://github.com/gabrielmissio/pre-cadastro-poc#readme"
+  "homepage": "https://github.com/gabrielmissio/pre-cadastro-poc#readme",
+  "devDependencies": {
+    "eslint": "8.8.0",
+    "eslint-config-airbnb-base": "15.0.0",
+    "eslint-plugin-import": "2.25.4"
+  }
 }
