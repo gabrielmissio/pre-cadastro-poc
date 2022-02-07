@@ -1,0 +1,19 @@
+{
+  "name": "pre-cadastro-poc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gabrielmissio/pre-cadastro-poc.git"
+  },
+  "author": "",
+  "license": "SEE LICENSE IN LICENSE",
+  "bugs": {
+    "url": "https://github.com/gabrielmissio/pre-cadastro-poc/issues"
+  },
+  "homepage": "https://github.com/gabrielmissio/pre-cadastro-poc#readme"
+}
