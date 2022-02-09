@@ -12,6 +12,8 @@
     "list-dynamodb-local-tables": "aws dynamodb list-tables --endpoint-url http://localhost:8000",
     "start-dynamodb-migrations": "node src/infra/migrations/register-migration.js start",
     "undo-dynamodb-migrations": "node src/infra/migrations/register-migration.js undo",
+    "populate-dynamodb-seeders": "node src/infra/seeders/register-seed.js populate",
+    "remove-dynamodb-seeders": "node src/infra/seeders/register-seed.js remove",
     "dev": "node ./src/server.js"
   },
   "repository": {
@@ -35,8 +37,8 @@
     "prettier": "2.5.1"
   },
   "dependencies": {
-    "aws-sdk": "^2.1070.0",
-    "dotenv": "^16.0.0",
-    "express": "^4.17.2"
+    "aws-sdk": "2.1059.0",
+    "dotenv": "16.0.0",
+    "express": "4.17.2"
   }
 }
