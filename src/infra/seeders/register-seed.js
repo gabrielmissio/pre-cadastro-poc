@@ -1,12 +1,5 @@
-const AWS = require('aws-sdk');
 const data = require('./user-seed.json');
-
-AWS.config.update({
-  region: 'localhost',
-  endpoint: 'http://localhost:8000'
-});
-
-const dynamoDocClient = new AWS.DynamoDB.DocumentClient();
+const { dynamoDocClient } = require('../config/aws-resources');
 
 const TABLE_NAME = data.tableName;
 
