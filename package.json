@@ -13,7 +13,7 @@
     "start-dynamodb-migrations": "node src/infra/migrations/register-migration.js start",
     "undo-dynamodb-migrations": "node src/infra/migrations/register-migration.js undo",
     "populate-dynamodb-seeders": "node src/infra/seeders/register-seed.js populate",
-    "remove-dynamodb-seeders": "node src/infra/migrations/register-seed.JS remove",
+    "remove-dynamodb-seeders": "node src/infra/seeders/register-seed.js remove",
     "dev": "node ./src/server.js"
   },
   "repository": {
