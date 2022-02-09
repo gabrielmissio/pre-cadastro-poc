@@ -8,7 +8,7 @@
             "email": "johndoe@outlook.com",
             "cpf": "046.182.012-03",
             "cellphone": "(51)99182-4509",
-            "createdAt": "2021-12-31 00:00:00"  
+            "createdAt": "2021-12-25T21:31:59.632Z"  
         },
         {
             "PK": "USER#b4c0ff18-4429-4fa9-ad88-f39aef45be99",
@@ -17,7 +17,7 @@
             "email": "juliafernandes048@gmail.com",
             "cpf": "102.102.193-06",
             "cellphone": "(53)99121-9311",
-            "createdAt": "2022-01-31 00:00:00" 
+            "createdAt": "2022-01-21T08:34:12.632Z" 
         },
         {   
             "PK": "USER#866dabda-51cc-413c-ae4c-69c9eb04452c",
@@ -26,7 +26,7 @@
             "email": "igormendes@gmail.com",
             "cpf": "012.192.746-03",
             "cellphone": "(51)98420-1110",
-            "createdAt": "2022-01-23 00:00:00"
+            "createdAt": "2022-02-04T14:09:21.632Z"
         }
     ]
 }
