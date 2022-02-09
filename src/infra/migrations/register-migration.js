@@ -1,11 +1,4 @@
-const AWS = require('aws-sdk');
-
-AWS.config.update({
-  region: 'localhost',
-  endpoint: 'http://localhost:8000'
-});
-
-const dynamodb = new AWS.DynamoDB();
+const { dynamodb } = require('../config/aws-resources');
 
 const params = {
   TableName: 'Register',
