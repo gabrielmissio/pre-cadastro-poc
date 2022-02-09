@@ -78,14 +78,12 @@ const params = {
 };
 
 const createTable = async () => {
-  const result = await dynamodb.createTable(params).promise();
-  console.log(JSON.stringify(result));
+  await dynamodb.createTable(params).promise();
   console.log('The table has been created');
 };
 
 const dropTable = async () => {
-  const result = await dynamodb.deleteTable({ TableName: params.TableName });
-  console.log(JSON.stringify(result));
+  await dynamodb.deleteTable({ TableName: params.TableName }).promise();
   console.log(`The table ${params.TableName} has been dropped`);
 };
 
