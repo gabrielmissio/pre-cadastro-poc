@@ -1,8 +1,9 @@
 const dynamoDocClient = require('../../infra/config/aws-resources');
 
 class UserRepository {
-  constructor() {
-    this.dynamoDocClient = dynamoDocClient;
+  constructor(tableName = 'Register', sortKey = 'PROFILE') {
+    this.tableName = tableName;
+    this.sortKey = sortKey;
   }
 }
 module.exports = UserRepository;
