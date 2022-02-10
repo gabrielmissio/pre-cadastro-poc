@@ -1,8 +1,14 @@
 const UserService = require('../services/UserService');
 
 class UserController {
-  constructor() {
-    this.userService = UserService;
+  async getById(req, res, next) {
+    try {
+      const response = await UserService.getById(req.params);
+      return res.status(200).json(response);
+    } catch (error) {
+      console.error(error);
+      return next(error);
+    }
   }
 }
 
