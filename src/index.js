@@ -15,7 +15,7 @@ class App {
   }
 
   routes() {
-    routes(this.express);
+    this.express.use(routes);
   }
 
   errors() {
