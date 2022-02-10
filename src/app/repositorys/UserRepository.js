@@ -1,4 +1,4 @@
-const {dynamoDocClient} = require('../../infra/config/aws-resources')
+const { dynamoDocClient } = require('../../infra/config/aws-resources');
 
 class UserRepository {
   constructor(tableName = 'Register', sortKey = 'PROFILE') {
