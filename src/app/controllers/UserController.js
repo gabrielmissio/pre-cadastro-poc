@@ -1,8 +1,13 @@
 const UserService = require('../services/UserService');
 
 class UserController {
-  constructor() {
-    this.userService = UserService;
+  async create(req, res, next) {
+    try {
+      const user = await UserService.create(req.body);
+      return res.status(200).json(user);
+    } catch (error) {
+      return next(error);
+    }
   }
 }
 
