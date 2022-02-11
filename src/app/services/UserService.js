@@ -1,4 +1,4 @@
-const UserRepository = require('../repositorys/UserRepository');
+const UserRepository = require('../repositories/UserRepository');
 const concat = require('../utils/PartitionKeyConcatenator');
 const NotFound = require('../errors/NotFound');
 
