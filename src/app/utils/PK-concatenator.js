@@ -1,7 +1,7 @@
 class PKConcatenator {
-  concat(prefix, uuid) {
+  static concat(prefix, uuid) {
     return `${prefix}#${uuid}`;
   }
 }
 
-module.exports = new PKConcatenator();
+module.exports = PKConcatenator.concat;
