@@ -1,5 +1,5 @@
 const UserRepository = require('../repositorys/UserRepository');
-const concat = require('../utils/PK-concatenator');
+const concat = require('../utils/PartitionKeyConcatenator');
 const NotFound = require('../errors/NotFound');
 
 class UserService {
