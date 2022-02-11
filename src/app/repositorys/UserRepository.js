@@ -1,18 +1,17 @@
-const { randomUUID } = require('crypto');
+const UuidGenerator = require('../utils/UuidGenerator');
 const { dynamoDocClient } = require('../../infra/config/aws-resources');
 const PKConcatenator = require('../utils/PK-concatenator');
 
 class UserRepository {
-  constructor(tableName = 'Register', sortKey = 'PROFILE', user = 'USER', uuid = randomUUID()) {
+  constructor(tableName = 'Register', sortKey = 'PROFILE', user = 'USER') {
     this.tableName = tableName;
     this.sortKey = sortKey;
     this.user = user;
-    this.uuid = uuid;
   }
 
   async create(payload) {
     const user = 'USER';
-    const userId = PKConcatenator.concat(user, this.uuid);
+    const userId = PKConcatenator.concat(user, UuidGenerator);
     const dateTime = new Date().toISOString();
 
     const data = {
