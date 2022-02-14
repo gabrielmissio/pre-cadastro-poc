@@ -11,5 +11,12 @@ class UserService {
 
     return user;
   }
+
+  async deleteOne({ id }) {
+    const { Item } = await this.getById({ id });
+    const { PK } = Item;
+
+    return UserRepository.deleteOne(PK);
+  }
 }
 module.exports = new UserService();
