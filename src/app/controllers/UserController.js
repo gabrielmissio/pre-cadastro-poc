@@ -2,6 +2,15 @@ const UserService = require('../services/UserService');
 const serialize = require('../serialize/SuccessfulResponseSerialize');
 
 class UserController {
+  async create(req, res, next) {
+    try {
+      const user = await UserService.create(req.body);
+      return res.status(201).json(user);
+    } catch (error) {
+      return next(error);
+    }
+  }
+
   async getById(req, res, next) {
     try {
       const response = await UserService.getById(req.params);
