@@ -1,31 +1,21 @@
-const UuidGenerator = require('../utils/UuidGenerator');
+const dotenv = require('dotenv');
 const { dynamoDocClient } = require('../../infra/config/aws-resources');
-const PKConcatenator = require('../utils/PK-concatenator');
+
+dotenv.config();
 
 class UserRepository {
-  constructor(tableName = 'Register', sortKey = 'PROFILE', user = 'USER') {
-    this.tableName = tableName;
+  constructor(sortKey = 'PROFILE', user = 'USER') {
     this.sortKey = sortKey;
     this.user = user;
   }
 
   async create(payload) {
-    const user = 'USER';
-    const userId = PKConcatenator.concat(user, UuidGenerator);
-    const dateTime = new Date().toISOString();
-
-    const data = {
-      PK: userId,
-      SK: this.sortKey,
-      ...payload,
-      createdAt: dateTime
-    };
     return dynamoDocClient
       .put({
-        TableName: this.tableName,
-        Item: data
+        TableName: process.env.AWS_DYNAMO_TABLENAME,
+        Item: payload
       })
       .promise();
   }
 }
-module.exports = UserRepository;
+module.exports = new UserRepository();
