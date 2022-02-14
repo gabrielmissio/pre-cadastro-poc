@@ -13,6 +13,16 @@ class UserController {
       return next(error);
     }
   }
+
+  async delete(req, res, next) {
+    try {
+      await UserService.deleteOne(req.params);
+      return res.status(204).end();
+    } catch (error) {
+      console.error(error);
+      return next(error);
+    }
+  }
 }
 
 module.exports = new UserController();
