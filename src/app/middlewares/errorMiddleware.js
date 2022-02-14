@@ -1,5 +1,5 @@
 const NotFound = require('../errors/NotFound');
-const errorSerialize = require('../serialize/errorSerialize');
+const serialize = require('../serialize/ErrorResponseSerialize');
 
 const errorHandler = (error, req, res, next) => {
   let statusCode = 500;
@@ -7,7 +7,7 @@ const errorHandler = (error, req, res, next) => {
   if (error instanceof NotFound) statusCode = 404;
   else statusCode = 400;
 
-  res.status(statusCode).json(errorSerialize(error));
+  res.status(statusCode).json(serialize(error));
   next();
 };
 
