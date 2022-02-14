@@ -15,5 +15,17 @@ class UserRepository {
       })
       .promise();
   }
+
+  async deleteOne(id) {
+    return dynamoDocClient
+      .delete({
+        TableName: process.env.AWS_DYNAMO_TABLENAME,
+        Key: {
+          PK: id,
+          SK: 'PROFILE'
+        }
+      })
+      .promise();
+  }
 }
 module.exports = new UserRepository();
