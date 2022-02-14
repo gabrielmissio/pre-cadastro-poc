@@ -1,9 +1,6 @@
-const { Router } = require('express');
-const user = require('./user.router');
+const router = require('express').Router();
+const userRouter = require('./user.router');
 
-module.exports = (server) => {
-  server.use((req, res, next) => {
-    user(server, new Router());
-    next();
-  });
-};
+router.use('/api/v1/user', userRouter);
+
+module.exports = router;

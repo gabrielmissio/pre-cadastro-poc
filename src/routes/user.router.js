@@ -1,3 +1,6 @@
-module.exports = (server, routes, prefix = '/api/v1/user') => {
-  server.use(prefix, routes);
-};
+const userRouter = require('express').Router();
+const UserController = require('../app/controllers/UserController');
+
+userRouter.get('/:id', UserController.getById);
+
+module.exports = userRouter;
